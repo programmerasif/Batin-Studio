@@ -1,0 +1,78 @@
+:root {
+    --card-height: 40vw;
+    --card-margin: 4vw;
+    --card-top-offset: 1em;
+    --outline-width: 0px;
+}
+
+#cards {
+    /* Make place at bottom, as items will slide to that position*/
+    padding-bottom: calc(var(--numcards) * var(--card-top-offset));
+    /* Don't include the --card-margin in padding, as that will affect the scroll-timeline*/
+    margin-bottom: var(--card-margin);
+}
+
+#card_1 {
+    --index: 1;
+}
+
+#card_2 {
+    --index: 2;
+    margin-left: 2em;
+}
+
+#card_3 {
+    --index: 3;
+    margin-left: -2em;
+}
+
+#card_4 {
+    --index: 4;
+    margin-left: 1em;
+}
+.card{
+    position: sticky;
+    top: 5em;
+    padding-top: calc(var(--index) * var(--card-top-offset));
+}
+#cards {
+    list-style: none;
+}
+
+.card__content {
+    background:none;
+    color: rgb(10, 5, 7);
+    border-radius: 1em;
+    overflow: hidden;
+
+    display: grid;
+    grid-template-areas: "img text";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+
+    align-items: stretch;
+    outline: var(--outline-width) solid blue;
+}
+
+.card__content>div {
+    grid-area: text;
+    width: 80%;
+    place-self: center;
+    text-align: left;
+
+    display: grid;
+    gap: 1em;
+    place-items: start;
+}
+
+.card__content>figure {
+    grid-area: img;
+    overflow: hidden;
+}
+
+.card__content>figure>img {
+    width: 33.5em;
+    height: 37.5em;
+    object-fit: cover;
+    border-radius: 10px;
+}
