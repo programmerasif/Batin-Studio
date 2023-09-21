@@ -2,7 +2,7 @@ import React from 'react';
 import { images } from './images';
 function SliderText() {
   return (
-    <div className=" flex textSlider items-center min-h-screen justify-center">
+    <div className=" flex textSlider items-center min-h-screen justify-center md:-mt-5 lg:-mt-16 ">
       {/* 1. */}
       <div className="w-[200%] h-[170px]   overflow-hidden relative">
         {/* 2. */}

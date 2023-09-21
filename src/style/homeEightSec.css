@@ -59,7 +59,6 @@
     width: 80%;
     place-self: center;
     text-align: left;
-
     display: grid;
     gap: 1em;
     place-items: start;
@@ -75,4 +74,13 @@
     height: 37.5em;
     object-fit: cover;
     border-radius: 10px;
+}
+@media screen and (max-width : 768px) {
+    #cards{
+        display: none;
+    }
+    .card__content{
+        background-color: aqua;
+        grid-template-columns: reverse ;
+    }
 }

@@ -1,0 +1,29 @@
+.my-btnn {
+    padding: 0 1.5rem; 
+    border: 1px solid #4a5568; /* Equivalent to border border-gray-700 */
+    border-radius: 9999px; /* Equivalent to rounded-full */
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #4a5568; /* Equivalent to text-gray-500 */
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 200px;
+    height: 50px;
+  }
+  
+  .my-btnn:hover {
+    background-color: #cbd5e0; /* Equivalent to hover:bg-gray-500 */
+    color: #ffffff; /* Equivalent to hover:text-white */
+  }
+  
+  .my-btnn:active {
+    color: #ffffff; /* Equivalent to active:text-white */
+    border-radius: 9999px; /* Equivalent to active:rounded-full */
+  }

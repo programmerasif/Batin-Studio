@@ -16,7 +16,7 @@ const Nav = () => {
     setNavi('block');
   };
   return (
-    <>
+    <div className='Nav-js'>
       <div className="navMain my-font flex justify-between max-w-[90%] relative z-50 h-[72px] rounded-full backdrop-blur-[34px] px-[25px] bg-transparent mx-auto mt-5">
         <Link to="/">
           <div className="nav_left_content  flex items-center justify-start h-full ">
@@ -35,10 +35,13 @@ const Nav = () => {
               <Link to="/about">About</Link>
             </li>
             <li className="desktop hover:border-b hover:border-black duration-300">
-              <Link to="/">News</Link>
+              <Link to="/CaseStudy">Case-Study</Link>
             </li>
             <li className="desktop hover:border-b hover:border-black duration-300">
               <Link to="/contact">Contact</Link>
+            </li>
+            <li className="desktop hover:border-b hover:border-black duration-300">
+              <Link to="/article">Article</Link>
             </li>
             
           </ul>
@@ -120,9 +123,9 @@ const Nav = () => {
           </div>
 
           :
-          <div className="navMain my-font flex justify-between w-[90%] absolute  backdrop-blur-[34px] px-[25px] bg-[#e9e9e963] mx-auto mt-5 top-0 left-[5%] h-[72px] rounded-3xl duration-300">
+          <div className="navMain second-navMain my-font flex justify-between w-[90%] absolute  backdrop-blur-[34px] px-[25px] bg-[#e9e9e963] mx-auto mt-5 top-0 left-[5%] h-[72px] rounded-3xl duration-300">
 
-            <div className='flex mx-auto gap-40 pt-28 opacity-0 duration-300'>
+            <div className='flex  mx-auto gap-40 pt-28 opacity-0 duration-300'>
               <ul className='flex flex-col gap-4 list-none'>
                 <li className='nav-md-font'>
                   <Link>Get in touch</Link>
@@ -179,7 +182,7 @@ const Nav = () => {
 
 
 
-    </>
+    </div>
   );
 };
 

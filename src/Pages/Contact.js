@@ -7,7 +7,7 @@ const Contact = () => {
         <div>
             <Nav></Nav>
 
-            <section className='section'>
+            <section className='section mx-5 lg:mx-10'>
                 <div className='my-title text-left'>
                     👋 Hey! Tell us all the things.
                 </div>
@@ -32,7 +32,7 @@ const Contact = () => {
                 </div>
             </section>
 
-            <section className='section'>
+            <section className='section mx-5 lg:mx-10'>
 
                 <div className='my-title text-left'>
                     Tell us about you...
@@ -47,7 +47,7 @@ const Contact = () => {
 
             </section>
 
-            <section className='section'>
+            <section className='section mx-5 lg:mx-10'>
 
                 <div className='my-title text-left text-[32px] font-thin'>
                     Which type of assistance do you need?
@@ -68,7 +68,7 @@ const Contact = () => {
 
             </section>
 
-            <section className='section'>
+            <section className='section mx-5 lg:mx-10'>
                 <div className='my-title text-left'>
                     Add files (optional)
                 </div>

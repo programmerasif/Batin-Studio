@@ -9,6 +9,15 @@ import Contact from './Pages/Contact';
 import Meeting from './Pages/Meeting';
 import Article from './Pages/Article';
 import ProductDetails from './Pages/ProductDetails';
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
+import Admin from './Pages/Admin';
+import AuthContextProvider from './components/HooksFile/AuthContextProvider';
+
+
+const queryClient = new QueryClient()
 
 const router = createBrowserRouter([
   {
@@ -28,7 +37,7 @@ const router = createBrowserRouter([
     element: <Portfolio />,
   },
   {
-    path: '/case-study',
+    path: '/CaseStudy',
     element: <CaseStudy />,
   },
   {
@@ -51,10 +60,17 @@ const router = createBrowserRouter([
     path: '/product-detail',
     element: <ProductDetails />,
   },
+  {
+    path: "/admin",
+    element: <Admin></Admin>
+  }
 ]);
 
 function App() {
-  return <RouterProvider router={router} />;
+
+  return <AuthContextProvider>
+    <QueryClientProvider client={queryClient}> <RouterProvider router={router} /> </QueryClientProvider>
+  </AuthContextProvider>
 }
 
 export default App;

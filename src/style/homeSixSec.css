@@ -1,4 +1,5 @@
 .scroll-container {
+  /* height: 90vh; */
   width: 100%;
   overflow-x: scroll;
   scroll-behavior: smooth;

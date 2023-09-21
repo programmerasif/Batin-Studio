@@ -1,0 +1,17 @@
+.SixSecModal-style{
+    background-color: rgba(0,0,0,0.9);
+    color: white;
+    width: 70%;
+    /* height: 450px; */
+    border: 2px solid aqua;
+    border-radius: 10px;
+    font-family: monospace;
+}
+.SixSecModal-style .SixSecModal-content .child-div{
+    height: 400px;
+    margin-top: 10px;
+}
+.SixSecModal-style .SixSecModal-content .child-div .modal-content img{
+    border: 1px solid antiquewhite;
+    border-radius: 15px;
+}
