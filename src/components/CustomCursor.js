@@ -1,6 +1,7 @@
 import { useState } from "react"
 
 export default function CustomCursor({ imagePath, visible }) {
+
     const [mousex, setMousex] = useState();
     const [mousey, setMouseY] = useState();
     const rect = document.body.getBoundingClientRect();
@@ -27,4 +28,5 @@ export default function CustomCursor({ imagePath, visible }) {
             }}
             onMouseMove={setMousePosition} class="custom-cursor"></div>
     )
+    
 }

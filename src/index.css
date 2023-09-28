@@ -23,11 +23,31 @@ html {
   overflow-x: hidden;
 }
 
-/* .pudate-button {
+/* .update-button {
   border: 2px solid ;
 } */
 
-.pudate-button {
+/* Add this CSS to your stylesheet */
+.iframe {
+  pointer-events: none;
+}
+
+.iframe::-webkit-media-controls {
+  display: none !important;
+}
+
+.iframe::-webkit-media-controls-panel {
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.coursoreStyle{
+  /* background-color: #a80a0a !important; */
+}
+
+.update-button {
   --color: #560bad;
   font-family: inherit;
   display: inline-block;
@@ -46,7 +66,7 @@ html {
   color: var(--color);
  }
  
- .pudate-button:before {
+ .update-button:before {
   content: "";
   position: absolute;
   z-index: -1;
@@ -56,24 +76,59 @@ html {
   border-radius: 50%;
  }
  
- .pudate-button:hover {
+ .update-button:hover {
   color: #fff;
  }
  
- .pudate-button:before {
+ .update-button:before {
   top: 100%;
   left: 100%;
   transition: all .7s;
  }
  
- .pudate-button:hover:before {
+ .update-button:hover:before {
   top: -30px;
   left: -30px;
  }
  
- .pudate-button:active:before {
+ /* CursorCircle.css */
+.nav-circle {
+  width: 50px;
+  height: 50px;
+  background-color: black;
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none; 
+}
+
+
+.cursor {
+  width: 50px;
+  height: 50px;
+  background-color: black; /* Change to the color you desire */
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none; /* Allows events to pass through the circle */
+  left: 100px;
+
+}
+
+.cursor-pointer-style{
+  /* cursor: none; */
+}
+
+
+
+
+ .update-button:active:before {
   background: #3a0ca3;
   transition: background 0s;
+ }
+
+ @media screen and (max-width : 768px) {
+  .update-button{
+    display: none;
+  }  
  }
 
 @layer components {
@@ -164,6 +219,10 @@ html {
     font-size: 48px;
     font-family: 'NewYork';
   }
+  .mobile-device-nav-style{
+    background-color: #a80a0a !important;
+    /* width: 320px !important; */
+  }
 
   .background {
     background-color: rgba(255, 255, 255, 1);
@@ -190,7 +249,7 @@ html {
   
   .my-btn {
     padding: 0.75rem 1.5rem; /* Equivalent to px-6 py-3 */
-    border: 1px solid #4a5568; /* Equivalent to border border-gray-700 */
+    border: 1px solid #a9b0bd; /* Equivalent to border border-gray-700 */
     border-radius: 9999px; /* Equivalent to rounded-full */
     text-align: center;
     text-decoration: none;
@@ -200,16 +259,31 @@ html {
     font-size: 1rem;
     line-height: 1.5;
     color: #4a5568; /* Equivalent to text-gray-500 */
+    font-family: 'NewYork';
+    transition: all 0.5s;
+
   }
   
   .my-btn:hover {
-    background-color: #cbd5e0; /* Equivalent to hover:bg-gray-500 */
-    color: #ffffff; /* Equivalent to hover:text-white */
+    background-color: #e6ebf0; /* Equivalent to hover:bg-gray-500 */
+    /* color: #ffffff; Equivalent to hover:text-white */
+    color: black;
+    border: 1px solid #131519;
   }
   
-  .my-btn:active {
-    color: #ffffff; /* Equivalent to active:text-white */
-    border-radius: 9999px; /* Equivalent to active:rounded-full */
+  .my-btn-active {
+    padding: 0.75rem 1.5rem; /* Equivalent to px-6 py-3 */
+    border: 1px solid #a9b0bd; /* Equivalent to border border-gray-700 */
+    border-radius: 9999px; /* Equivalent to rounded-full */
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #4a5568; /* Equivalent to text-gray-500 */
+    font-family: 'NewYork';
   }
   
 
@@ -304,12 +378,11 @@ body {
   transition: 0.7s;
 }
 
-.arothmatic:hover .dig::before {
+/* .arothmatic:hover .dig::before {
   animation: texi 0.5s 1;
   content: '';
   background: #111;
   color: #a80a0a !important;
-  /* color: #fff !important; */
   margin-top: -36px;
   margin-left: -5px;
   width: 100px;
@@ -319,17 +392,16 @@ body {
   left: 0%;
   top: 0%;
   z-index: -1;
-}
+} */
 
 .heroImg {
   background-image: url(../public/images/hero.svg);
   background-repeat: no-repeat;
   background-size: 72.625em 45.5em;
   background-position: 50% -50px;
-  width: 80%;
+  width: 90%;
   margin: 0px auto;
   height: 700px;
-
 }
 
 .vidContainer {
@@ -337,7 +409,7 @@ body {
 }
 
 .custom-cursor {
-  cursor: url('components/hero_desk.png'), auto;
+  /* cursor: url('components/hero_desk.png'), auto; */
 
 }
 
@@ -354,12 +426,15 @@ body {
   position: relative;
   border-radius: 50%;
   transition: 0.4s;
+
 }
 
 .contact-us-chat-icon {
   position: absolute;
   right: var(--chat-icon-right);
   top: 33%;
+  transition: all 0.3s;
+  display: block;
 }
 
 .contact-us-chat-icon:hover {
@@ -412,6 +487,16 @@ body {
   display: none;
 }
 
+.Nav-js{
+  /* background-color: #a80a0a; */
+  width: 100% !important;
+}
+
+.Nav-js .nav-js-child{
+  /* background-color: #3a0ca3 !important; */
+  width: 100%;
+  border: 1px solid white;
+}
 
 @media screen and (max-width:768px) {
   .desktop {
@@ -441,6 +526,16 @@ body {
 
   }
 
+  .contact_png {
+    height: 80px;
+    width: 80px;
+    /* margin-left: 8px; */
+  }
+
+  .contact-us-chat-icon {
+    margin-right: -10px;
+    margin-top: -5px;
+  }
   .homeTitle1 {
     font-size: 26px;
     line-height: 35px
@@ -451,7 +546,7 @@ body {
     width: 100%;
     padding: 0px;
     /* height: 300px; */
-    margin-top: 0px;
+    /* margin-top: 100px; */
     cursor: url("../public/images/soundplay.png") auto;
   }
 
@@ -632,6 +727,9 @@ body {
   .learro img {
     height: 16px !important;
   }
+  /* .seven-main-div .left_fourth .learro{
+    background-color: #a80a0a !important;
+  } */
 
   .wmw {
     margin-top: 0px !important;
@@ -755,6 +853,18 @@ body {
   /* .navMain .nav_right_content , .nav_left_content{
   display:none
 }  */
+
+.Nav-js .navMain{
+  /* background-color: #3a0ca3  !important; */
+}
+
+.navMain .second-navMain{
+  background-color: #a80a0a !important;
+}
+
+/* .nav-js-child .nav_right_content .uil-arrow-down{
+  background-color: #3a0ca3 !important;
+} */
 
 }
 

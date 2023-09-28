@@ -57,7 +57,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <p className="text-gray-400 py-6 text-center font-sans text-[12px]">
+          <p className="text-gray-400 py-6 text-center font-[Inter] text-[12px]">
             © Batin Studio 2023 | All rights reserved.
           </p>
         </div>

@@ -1,0 +1,38 @@
+.lats-contact-style{
+    overflow: hidden;
+}
+
+.lats-contact-style .lats-contact-child{
+    opacity: 0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.lats-contact-style .lats-contact-child p{
+    padding: 0 10px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.lats-contact-style:hover .lats-contact-child {
+    opacity: 1;
+    overflow: hidden;
+}
+.lats-contact-style .lats-contact-child img{
+    margin-right: -50px;
+}
+
+.lats-contact-style .lats-contact-child:hover {
+    width: 220px;
+    border-radius: 50px;
+}
+.lats-contact-style .lats-contact-child:hover img {
+   margin-right: 0;
+}
+
+

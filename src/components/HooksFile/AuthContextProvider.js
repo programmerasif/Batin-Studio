@@ -8,7 +8,9 @@ const auth = getAuth(app)
 const AuthContextProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
-    const adminEmail = "fozlerabbishuvo@gmail.com"
+    const adminEmail = "mattrixshakhawat@gmail.com"
+
+
 
     const createUserr = (email, password) => {
         setLoading(true)

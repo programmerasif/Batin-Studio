@@ -5,7 +5,10 @@ import Footer from '../components/Footer';
 const Meeting = () => {
     return (
         <div>
-            <Nav></Nav>
+
+           <div className='mx-5 lg:mx-10'>
+           <Nav></Nav>
+           </div>
 
             <section className='section sm:w-[500px] mx-auto'>
 
@@ -15,16 +18,21 @@ const Meeting = () => {
                 <p className='font-sans'>
                     We recommend scheduling call to save time and less back and forth with emails.
                 </p>
-                <div className='mx-auto mt-4 text-center'>
-                    <button className='my-btn bg-black text-white font-sans'>
+                <div className=' flex justify-center'>
+
+                    <a href='https://calendly.com/batinstudio/meeting?month=2023-09' target='_blank' className='my-btn bg-black text-white font-sans cursor-pointer z-40'>
                         Schedule a call
-                    </button>
+                    </a>
+
                 </div>
 
             </section>
 
             <div className="absolute bottom-0 right-0 left-0">
+            <div className='mx-5 lg:mx-10'>
                 <Footer></Footer>
+           </div>
+
             </div>
             <div></div>
             {/** contact us button **/}

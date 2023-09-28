@@ -1,17 +1,17 @@
-import { useQuery } from '@tanstack/react-query';
+// import { useQuery } from '@tanstack/react-query';
 
-const useSixSec = () => {
+// const useSixSec = () => {
 
-    const { data: SixSecScrollData, isLoading, refetch } = useQuery({
-        queryKey: ['SixSecScrollData'],
-        queryFn: async () => {
-            const res = await fetch("http://localhost:5000/SixSecScrollData");
-            const data = await res.json();
-            return data;
-        },
-    });
+//     const { data: SixSecScrollData, isLoading, refetch } = useQuery({
+//         queryKey: ['SixSecScrollData'],
+//         queryFn: async () => {
+//             const res = await fetch("http://localhost:5001/SixSecScrollData");
+//             const data = await res.json();
+//             return data;
+//         },
+//     });
 
-    return [SixSecScrollData, isLoading, refetch];
-};
+//     // return [SixSecScrollData, isLoading, refetch];
+// };
 
-export default useSixSec;
+// export default useSixSec;

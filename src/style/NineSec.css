@@ -1,0 +1,21 @@
+.nineSec-main-div .social-service-div{
+    display: flex;
+    justify-content: end;
+}
+.nineSec-main-div .social-service-div span{
+    /* background-color: aquamarine; */
+    margin: 0 5px;
+}
+.nineSec-main-div .social-service-div span a{
+    transition: all 0.2s;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    margin-right: -15px;
+}
+.nineSec-main-div .social-service-div span:hover a{
+    margin-right: 0;
+}

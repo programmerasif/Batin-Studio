@@ -15,6 +15,9 @@ import {
 } from '@tanstack/react-query'
 import Admin from './Pages/Admin';
 import AuthContextProvider from './components/HooksFile/AuthContextProvider';
+import UpdateSixSecData from './components/UpdateSixSecData/UpdateSixSecData';
+// import Folower from './components/ViderRoute/Folower';
+// import TestingVdo from './components/TestingVideoFile/TestingVdo';
 
 
 const queryClient = new QueryClient()
@@ -37,7 +40,7 @@ const router = createBrowserRouter([
     element: <Portfolio />,
   },
   {
-    path: '/CaseStudy',
+    path: '/CaseStudy/:id',
     element: <CaseStudy />,
   },
   {
@@ -63,7 +66,15 @@ const router = createBrowserRouter([
   {
     path: "/admin",
     element: <Admin></Admin>
-  }
+  },
+  // {
+  //   path: "/UpdateSixSecData/:id",
+  //   element: <UpdateSixSecData></UpdateSixSecData>
+  // },
+  // {
+  //   path : "/vdo",
+  //   element : <TestingVdo></TestingVdo>
+  // }
 ]);
 
 function App() {
